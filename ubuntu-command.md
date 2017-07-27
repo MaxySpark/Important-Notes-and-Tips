@@ -96,4 +96,8 @@ sudo apt-get update
 sudo apt-get install nextcloud-client
 ```
 
+## Install `Redshift` or Read Mode
+```
+sudo apt-get install redshift redshift-gtk
+```
 ### [MaxySpark](http://maxyspark.com)
