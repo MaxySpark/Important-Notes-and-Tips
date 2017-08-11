@@ -100,4 +100,10 @@ sudo apt-get install nextcloud-client
 ```
 sudo apt-get install redshift redshift-gtk
 ```
+
+## Install Screen Recorder
+```
+sudo add-apt-repository ppa:mhsabbagh/greenproject
+sudo apt update && sudo apt install green-recorder
+```
 ### [MaxySpark](http://maxyspark.com)
