@@ -28,3 +28,37 @@
 
         print a; // 8
     ```
+
+    ```c
+    //code
+    #include <stdio.h>
+    int main()
+    {
+        int a;
+        int *p;
+        p = &a;
+        a = 5;
+        
+        printf("value of a is %d\n",a);
+        printf("value of p is %p\n",p);
+        printf("value of &a is %p\n",&a);
+        printf("value of &p is %p\n",&p);
+        printf("value of *p is %d\n",*p);
+        
+        *p = 8;
+        
+        printf("value of a is %d\n",a);
+        
+        return 0;
+    }
+
+    //output
+
+    value of a is 5
+    value of p is 0x7ffdc179cc5c
+    value of &a is 0x7ffdc179cc5c
+    value of &p is 0x7ffdc179cc60
+    value of *p is 5
+    value of a is 8
+    ```
+    
