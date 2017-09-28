@@ -39,26 +39,50 @@
         p = &a;
         a = 5;
         
-        printf("value of a is %d\n",a);
-        printf("value of p is %p\n",p);
-        printf("value of &a is %p\n",&a);
-        printf("value of &p is %p\n",&p);
-        printf("value of *p is %d\n",*p);
+        printf("a = %d\n",a);
+        printf("p = %p\n",p);
+        printf("&a = %p\n",&a);
+        printf("&p = %p\n",&p);
+        printf("*p = %d\n",*p);
         
         *p = 8;
         
-        printf("value of a is %d\n",a);
+        printf("After dereferencing, a = %d\n",a);
         
         return 0;
     }
 
     //output
 
-    value of a is 5
-    value of p is 0x7ffdc179cc5c
-    value of &a is 0x7ffdc179cc5c
-    value of &p is 0x7ffdc179cc60
-    value of *p is 5
-    value of a is 8
+    a = 5
+    p = 0x7ffeb0b1ed7c
+    &a = 0x7ffeb0b1ed7c
+    &p = 0x7ffeb0b1ed80
+    *p = 5
+    After dereferencing, a = 8
+
     ```
-    
+
+- `<datatype> *p`
+
+   `p+1 will point to the address (p + size of datatype of p points to)`
+
+- Pointer to Pointer
+    ```c
+    int a = 10;
+
+    int *p = &a; // address of a
+
+    int **q = &p; // address of p
+
+    int ***r = &q; // address of q
+
+    print r; // adress of q
+
+    print *r; // value at q || (address of p)
+
+    print **r; // value at *q or *(address of p) || (address of a)
+
+    print ***r; // value at *p or *(address of a) || **q || value of a
+
+    ```
