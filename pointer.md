@@ -175,3 +175,9 @@
 
     char *C = "hello"; // it works but we can't use C[0] = 'A' etc.
     ```
+
+- **Pointer and 2D Array**
+    ```c
+    A[i][j] = *(B[i]+j)
+            = *(*(B+i)+j)
+    ```
