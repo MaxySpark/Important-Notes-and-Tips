@@ -106,4 +106,19 @@
 
     ```
 
-- 
+- **Pointer and Array**
+    ```c
+    int A = {1,2,3,4,5};
+
+    print A; // Adress of the first element of the Array || &A[0]
+
+    int *p = A;
+
+    // We can do p++ but not A++
+
+    print (A+1); // Address of 2nd element or adress of index 1 || &A[1]
+
+    print *(A); // Value at index 0 or first element || A[0] 
+    print *(A+2); // Value at index 2 or first element || A[2]
+
+    ```
