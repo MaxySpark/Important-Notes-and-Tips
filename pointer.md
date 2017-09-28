@@ -122,3 +122,56 @@
     print *(A+2); // Value at index 2 or first element || A[2]
 
     ```
+
+- **Array as Function Argument**
+
+    ```c
+    int SOE(int A[],int size){
+        // Here Array is Passed as Reference
+        // int A[] = int *A
+        // Always Pass the size of the array
+    }
+    int main() {
+        int A[] = {1,2,3,4,5};
+
+        int size = sizeof(A)/sizeof(A[0]);
+
+        SOE(A,size);
+        // or we can write SOE(&A[0],size);
+        // Since array as function argument only returns the address of the first element
+    }
+
+    ```
+
+- **Pointer and String/Character Array**
+    ```c
+    #include <stdio.h>
+
+    void print(char* C) // void print(char C[])
+    {
+        // int i =0;
+        while(*C != '\0') // while(C[i] != '\0')
+        {
+            printf("%c",*C); // printf("%c",C[i])
+            C++; // i++
+        }
+        printf("\n");
+    }
+
+    int main() 
+    {
+        char C[20] = "Hello";
+        print(C);
+        return 0;
+    }
+    ```
+
+    ```c
+    char C1[6] = "hello";
+    
+    char* C2 = C1; // valid
+    
+    C1 = C2; // not valid
+
+    char *C = "hello"; // it works but we can't use C[0] = 'A' etc.
+    ```
