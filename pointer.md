@@ -67,7 +67,7 @@
 
    `p+1 will point to the address (p + size of datatype of p points to)`
 
-- Pointer to Pointer
+- **Pointer to Pointer**
     ```c
     int a = 10;
 
@@ -86,3 +86,24 @@
     print ***r; // value at *p or *(address of a) || **q || value of a
 
     ```
+
+- **Function Call By Reference**
+    ```c
+    void Increment(int *p) {
+        //int *p -> Formal Argument
+
+        *p = (*p) + 1;
+
+        // increase the value at p by 1
+    }
+    int main() {
+        int a = 10;
+        Increment(&a);
+
+        // pass the address
+        // &a -> Actual Argument
+    }
+
+    ```
+
+- 
