@@ -181,3 +181,52 @@
     A[i][j] = *(B[i]+j)
             = *(*(B+i)+j)
     ```
+
+- **Dynamic Memory Allocation in Heap**
+    ```c
+    // In C Funcyion-
+    malloc // data_type *p = (data_type *)malloc(number_of_el * sizeof(data_type))
+           // malloc does not initialize the variable
+
+    calloc // data_type *p = (data_type *)calloc(number_of_el, sizeof(data_type))
+           // calloc initialize the variable with "zeros" (0)
+    
+    realloc // data_type *p = (data_type *)realloc(previous_pointer, number_of_el * sizeof(data_type))
+           // data_type *p = (data_type *)realloc(NULL, number_of_el * sizeof(data_type)) || malloc
+           // data_type *p = (data_type *)realloc(p, 0) || free(p)
+
+    free
+
+    // In C++ Function - 
+    new
+    delete
+    ```
+
+    ```c
+    // in C
+
+    int *p;
+    p = (int *)malloc(sizeof(int));
+    // malloc returns a void pointer from "HEAP"
+    // to cast void pointer to int pointer uses (int *) here
+    *p = 10;
+
+    free(p); // freed any memory allocated by malloc
+
+    int *a;
+    a = (int *)malloc(20*sizeof(int)); // a[20]
+    ```
+
+    ```c++
+    // in c++
+
+    int *p;
+    p = new int;
+    *p = 10;
+    delete p;
+
+    p = new int[20];
+    delete[] p;
+
+    // don't have to type cast
+    ```
